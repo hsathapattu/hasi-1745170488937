@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music - Hasindu Sanahas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+</head>
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+    <!-- Header (same as index.html) -->
+    <header x-data="{ isOpen: false }" class="bg-blue-600 text-white">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-semibold">
+                    <a href="index.html">Hasindu Sanahas</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="index.html" class="mx-3 hover:text-blue-200">Home</a>
+                    <a href="about.html" class="mx-3 hover:text-blue-200">About</a>
+                    <a href="poems.html" class="mx-3 hover:text-blue-200">Poems</a>
+                    <a href="software.html" class="mx-3 hover:text-blue-200">Software</a>
+                    <a href="music.html" class="mx-3 hover:text-blue-200">Music</a>
+                    <a href="contact.html" class="mx-3 hover:text-blue-200">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button @click="isOpen = !isOpen" type="button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                            <path x-show="!isOpen" fill-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"></path>
+                            <path x-show="isOpen" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div x-show="isOpen" class="md:hidden mt-3">
+                <a href="index.html" class="block py-2 hover:text-blue-200">Home</a>
+                <a href="about.html" class="block py-2 hover:text-blue-200">About</a>
+                <a href="poems.html" class="block py-2 hover:text-blue-200">Poems</a>
+                <a href="software.html" class="block py-2 hover:text-blue-200">Software</a>
+                <a href="music.html" class="block py-2 hover:text-blue-200">Music</a>
+                <a href="contact.html" class="block py-2 hover:text-blue-200">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="container mx-auto px-6 py-8 flex-grow">
+        <h1 class="text-4xl font-bold text-center mb-8">My Music</h1>
+        <div class="max-w-3xl mx-auto">
+            <p class="text-lg mb-6 text-center">
+                Explore my musical creations, where code meets melody and poetry finds rhythm.
+            </p>
+            <div class="space-y-6">
+                <!-- Music entry 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold mb-4">Binary Ballad</h2>
+                    <audio controls class="w-full mb-4" aria-label="Audio player for Binary Ballad">
+                        <source src="path_to_audio_file.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p class="text-gray-700">
+                        A fusion of electronic beats and classical harmonies, inspired by the duality of digital and analog worlds.
+                    </p>
+                </div>
+
+                <!-- Music entry 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-semibold mb-4">Algorithmic Anthem</h2>
+                    <audio controls class="w-full mb-4" aria-label="Audio player for Algorithmic Anthem">
+                        <source src="path_to_audio_file.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <p class="text-gray-700">
+                        An experimental piece where melodies are generated through complex algorithms, creating a unique listening experience every time.
+                    </p>
+                </div>
+
+                <!-- Add more music entries as needed -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-blue-600 text-white py-4 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2024 Hasindu Sanahas - All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
